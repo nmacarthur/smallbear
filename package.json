@@ -1,0 +1,13 @@
+{
+  "name": "smallbear",
+  "description": "The bare minimum css for kicking off a project.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-sass": "^4.0.2"
+  }
+}

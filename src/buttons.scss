@@ -1,0 +1,65 @@
+.button,
+a.button,
+button,
+[type='submit'],
+[type='reset'],
+[type='button'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  border: 1px solid var(--color);
+  border-radius: 3px;
+  background: var(--color);
+  color: #ffffff;
+  font-weight: 600;
+  font-family: var(--font);
+  font-size: 1rem;
+  text-transform: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0 0.5rem 0;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+}
+
+.button:hover,
+a.button:hover,
+button:hover,
+[type='submit']:hover,
+[type='reset']:hover,
+[type='button']:hover {
+  border: 1px solid var(--color);
+  background: var(--color-light);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.button:focus,
+.button:active,
+a.button:focus,
+a.button:active,
+button:focus,
+button:active,
+[type='submit']:focus,
+[type='submit']:active,
+[type='reset']:focus,
+[type='reset']:active,
+[type='button']:focus,
+[type='button']:active {
+  border: 1px solid var(--color);
+  background: var(--color);
+  color: #ffffff;
+  text-decoration: none;
+  outline: var(--color) auto 5px;
+}

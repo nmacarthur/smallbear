@@ -4,21 +4,21 @@ const concat = require('gulp-concat');
 const minifyCSS = require('gulp-csso');
 
 function full() {
-  return src('./src/stylekit-full.scss')
+  return src('./src/smallbear-full.scss')
     .pipe(sass())
     .pipe(minifyCSS())
     .pipe(dest('./dist'));
 }
 
 function nolayout() {
-  return src('./src/stylekit-nolayout.scss')
+  return src('./src/smallbear-nolayout.scss')
     .pipe(sass())
     .pipe(minifyCSS())
     .pipe(dest('./dist'));
 }
 
 function type() {
-  return src('./src/stylekit-type.scss')
+  return src('./src/smallbear-type.scss')
     .pipe(sass())
     .pipe(minifyCSS())
     .pipe(dest('./dist'));

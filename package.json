@@ -4,6 +4,10 @@
   "version": "1.0.4",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "watch": "gulp && gulp watch",
+    "build": "gulp"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",

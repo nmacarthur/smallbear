@@ -1,0 +1,10 @@
+---
+smallbear:
+message: "Watch or build smallbear?"
+options:
+  watch:
+    message: "Watching smallbear..."
+    command: "yarn watch"
+  build:
+    message: "Building smallbear..."
+    command: "yarn build"

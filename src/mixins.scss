@@ -1,0 +1,147 @@
+/*
+    Variables
+ */
+
+$xs: 0.25rem;
+$sm: 0.5rem;
+$md: 1rem;
+$lg: 2rem;
+$xl: 4rem;
+
+$media-md: 374px;
+$media-lg: 767px;
+$media-xlg: 1023px;
+
+/*
+    Wrapper
+
+    The wrapper is used to provide the base for elements to be placed inside of.
+
+    Usage:
+        @include wrapper;
+
+*/
+
+@mixin wrapper($width){
+    max-width: $width;
+    margin:auto;
+    @include p($sm, x);
+}
+
+
+/*
+    Shadow
+
+    The shadow mixin is designed to provide layered soft shadows.
+
+    Usage:
+
+
+*/
+
+@mixin shadow{
+    box-shadow: 0 2px 2px rgba(0,0,0,0.04),
+    0 6px 6px rgba(0,0,0,0.04),
+    0 12px 12px rgba(0,0,0,0.04),
+    0 24px 24px rgba(0,0,0,0.04),
+    0 48px 48px rgba(0,0,0,0.04);
+}
+
+
+/*
+    Padding or @include p();
+
+    Provides a clean repeatable way to produce uniform padding across a document.
+
+    Parameters:
+        $size:
+            !Size must be declared!
+            size: size;
+            Recommended use is with declared grid variables e.g. $sm, $md, $lg ... etc
+
+        $direction:
+            default (or blank): all;
+            x: left & right;
+            y: up & down;
+            other: other; e.g. bottom: padding-bottom;
+
+      Usage:
+        @include p($sm);
+         or
+        @include p($sm, bottom);
+         or
+        @include p(23px, top);
+*/
+
+@mixin p($size, $direction: all){
+    @if $direction == all{
+        padding: $size;
+    } @else if $direction == x {
+        padding-left: $size;
+        padding-right: $size;
+    } @else if $direction == y {
+        padding-top: $size;
+        padding-bottom: $size;
+    } @else {
+        padding-#{$direction}: $size;
+    }
+
+}
+
+
+/*
+    Margin or @include m();
+
+    Provides a clean repeatable way to produce uniform margin across a document.
+
+    Parameters:
+         $size:
+            !Size must be declared!
+            size: size;
+            Recommended use is with declared grid variables e.g. $sm, $md, $lg ... etc
+
+        $direction:
+            default (or blank): all;
+            x: left & right;
+            y: up & down;
+            other: other; e.g. bottom: margin-bottom;
+
+
+      Usage:
+        @include m($sm);
+         or
+        @include m($sm, bottom);
+         or
+        @include m(23px, top);
+*/
+
+@mixin m($size, $direction: all){
+    $margin: 0.5rem !default;
+
+    @if $direction == all{
+        margin: $size;
+    } @else if $direction == x {
+        margin-left: $size;
+        margin-right: $size;
+    } @else if $direction == y {
+        margin-top: $size;
+        margin-bottom: $size;
+    } @else {
+        margin-#{$direction}: $size;
+    }
+
+}
+
+
+/*
+
+    Media Queries
+
+ */
+
+@mixin media($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+

@@ -1,0 +1,9 @@
+
+.icon-home-outline:before { content: '\e800'; } /* '' */
+.icon--suitcase:before { content: '\e803'; } /* '' */
+.icon--media:before { content: '\e805'; } /* '' */
+.icon--report:before { content: '\e807'; } /* '' */
+.icon--chevron-left:before { content: '\e828'; } /* '' */
+.icon--chevron-right:before { content: '\e829'; } /* '' */
+.icon--phone:before { content: '\e833'; } /* '' */
+.icon-smile:before { content: '\f118'; } /* '' */

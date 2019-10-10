@@ -39,12 +39,19 @@ $media-xlg: 1023px;
 
 */
 
-@mixin shadow{
-    box-shadow: 0 2px 2px rgba(0,0,0,0.04),
-    0 6px 6px rgba(0,0,0,0.04),
-    0 12px 12px rgba(0,0,0,0.04),
-    0 24px 24px rgba(0,0,0,0.04),
-    0 48px 48px rgba(0,0,0,0.04);
+@mixin shadow($size: 2, $color: #000000){
+    $amount: $size;
+    $shadow: 0 #{$amount}px #{$amount}px rgba($color,0.04);
+    @for $i from 2 through 5 {
+        @if($i % 2 == 0){
+            $amount: $amount + 2;
+        }@else{
+            $amount: $amount * 2;
+        }
+        $shadow: $shadow, + 0 #{$amount}px #{$amount}px rgba($color, 0.04);
+    };
+    box-shadow: $shadow ;
+
 }
 
 
